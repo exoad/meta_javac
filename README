@@ -1,0 +1,14 @@
+This repository contains a set of plugins that I have created for the Javac compiler. Much of these
+plugins aim to increase functionality and the ability for the user to define certain functionalities
+based on certain compilation params. However, there are certain limitations within the compiler
+itself that can also influence how things can work and how certain pragmas can be called be
+between source and compiler. For example, you cannot simply leech a macro find and replace tool
+onto Javac's annotation parsing phase, instead you most definitely need to either:
+      1. Write a parser that handles the macros beforehand and then invokes the Javac compiler
+      2. Write a precheck for Javac that is ran in the first cycle of the Javac compilation life
+         cycle. [This however, heavily depends on Javac implementation]
+
+In general, you should not depend on these plugins to make Java much more friendlier, instead, it
+is probably far less problematic to use a different language. Additionally, plugins here can
+break at any time due to inconsistent source file versions and other different stuffs between
+JDK providers and Javac implementations.
