@@ -1,4 +1,4 @@
-package com.jackmeng.jvc;
+package com.jackmeng.jmcc;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -8,6 +8,6 @@ import java.lang.annotation.Target;
 
 
 @Documented @Target({ ElementType.CONSTRUCTOR,
-    ElementType.METHOD }) @Retention(RetentionPolicy.CLASS) public @interface _Emits {
+    ElementType.METHOD }) @Retention(RetentionPolicy.CLASS) public @interface _Debug {
   String message() default "";
 }

@@ -1,3 +1,6 @@
+JMCC - JackMeng Configurable Compiler (4j)
+
+
 [WARNING]
 It is highly recommended to not use anything from the "com.sun" packages due to them being
 very vendor specific and thus this standalone plugin will try its best to avoid doing
@@ -9,7 +12,8 @@ all specified versions & utility class  will be written and included:
       1. 14        -> Files prefixed with "se14_"
       2. 9         -> Files prefixed with "se09_"
       3. 8         -> Files prefixed with "se08_"
-      4. com.sun.* -> Files prefixed with "csun_"
+Note: 6,7 are not supported due to them being slightly obsolete and the dire preference
+to stay up to date.
 Thus different SDK versions will require different build versions and so force.
 
 The reason being that many compiler related libraries were removed from the unreliable "com.sun.*" packages.

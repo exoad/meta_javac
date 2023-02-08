@@ -1,7 +1,5 @@
 package com.jackmeng;
 
-import javax.naming.Context;
-
 import com.sun.source.util.*;
 
 public final class __TRANSPONDER
@@ -11,7 +9,7 @@ public final class __TRANSPONDER
 
   @Override public String getName()
   {
-    return "com_jackmeng_JVC_Standalone";
+    return "com_jackmeng_JMCC_Standalone";
   }
 
   @Override public void init(JavacTask task, String... args)
