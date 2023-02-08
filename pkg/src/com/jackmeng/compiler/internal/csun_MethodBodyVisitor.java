@@ -1,9 +1,9 @@
-package com.jackmeng.compiler;
+package com.jackmeng.compiler.internal;
 
 import com.sun.source.util.TreeScanner;
 import java.util.StringJoiner;
 
-public class use_MethodBodyVisitor
+public class csun_MethodBodyVisitor
     extends TreeScanner< Void, StringBuilder >
 {
   @Override

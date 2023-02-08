@@ -10,6 +10,8 @@ import javax.lang.model.element.ExecutableElement;
 import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 
+import com.jackmeng.jvc._Emits;
+
 @SupportedAnnotationTypes("com.jackmeng.compiler._Emits") public final class jvc_Emit
     extends AbstractProcessor
 {

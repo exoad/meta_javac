@@ -1,4 +1,4 @@
-package com.jackmeng.compiler;
+package com.jackmeng.jvc;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

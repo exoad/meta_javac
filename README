@@ -1,3 +1,29 @@
+[WARNING]
+It is highly recommended to not use anything from the "com.sun" packages due to them being
+very vendor specific and thus this standalone plugin will try its best to avoid doing
+so through the usage via "javax.lang" and the ToolsAPI. However, for older and less
+specific plugins, "com.sun" will be utilized.
+
+Furthermore, due the prevalence of different versions under the "javax.lang" module,
+all specified versions & utility class  will be written and included:
+      1. 14        -> Files prefixed with "se14_"
+      2. 9         -> Files prefixed with "se09_"
+      3. 8         -> Files prefixed with "se08_"
+      4. com.sun.* -> Files prefixed with "csun_"
+Thus different SDK versions will require different build versions and so force.
+
+The reason being that many compiler related libraries were removed from the unreliable "com.sun.*" packages.
+One such JAR that is crucial to make a functional plugin is required from "tools.jar" under
+"$JAVA_HOME/lib/" which has been unfortunately removed since Java 9 (messed up everything).
+
+If you would like to tag along with my development environment, you may follow with the
+below specifications:
+
+            JDK Base : OpenJDK Build 2022-07-19
+            JDK Vendor : Adoptium (Eclipse) Temurin [https://adoptium.net/about/]
+            JDK Version : 17.0.4 (build 17.0.4+8)
+
+
 This repository contains a set of plugins that I have created for the Javac compiler. Much of these
 plugins aim to increase functionality and the ability for the user to define certain functionalities
 based on certain compilation params. However, there are certain limitations within the compiler
@@ -12,3 +38,30 @@ In general, you should not depend on these plugins to make Java much more friend
 is probably far less problematic to use a different language. Additionally, plugins here can
 break at any time due to inconsistent source file versions and other different stuffs between
 JDK providers and Javac implementations.
+
+
+== File prefixing legend ==
+This legend adds some prefixes that are native to this project and does
+
+"se14"
+      For files relating to the specific SE Release Version 14
+      - Highly environment specific
+
+"se08"
+      For files relating to the specific SE Release Version 8 (1.8)
+      - Highly environment specific
+
+"se09"
+      For files relating to the specific SE Release Version 9
+      - Highly environment specific
+
+"csun"
+      For files relating to the specific module "com.sun" and utilizes its defunct routines
+      - EXTREMELY ENVIRONMENT & COMPILER SPECIFIC
+
+"_"
+      Standard annotation that is checked and validated by this plugin
+
+"__"
+      Internal to external interfaces that are exposed so certain functionalities like being
+      able to be recognized as a Javac compiler etc..
